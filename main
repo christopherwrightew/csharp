@@ -1,0 +1,23 @@
+public class Palindrome {
+    public static bool IsPalindrome(string str) {
+        int left = 0;
+        int right = str.Length - 1;
+        while (left < right) {
+            if (str[left] != str[right]) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void Main(string[] args) {
+        string word = "Deified";
+        if (IsPalindrome(word)) {
+            Console.WriteLine($"{word} является палиндромом");
+        } else {
+            Console.WriteLine($"{word} не является палиндромом");
+        }
+    }
+}
